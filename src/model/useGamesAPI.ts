@@ -7,11 +7,11 @@ export function useGamesAPI(api: GameAPI) {
 
   const [games, dispatch] = React.useReducer(gamesReducer, initialGames);
 
-  const getGame = (id: number) =>
-    void api.getGame(id).then(game => dispatch({ type: "set-game", game }));
-
-  const setGameStatus = (id: number, status: GameStatus) =>
-    void api.patchGameStatus(id, status).finally(() => getGame(id));
+  const setGameStatus = async (id: number, status: GameStatus) => {
+    await api.patchGameStatus(id, status);
+    const patchedGame = await api.getGame(id);
+    dispatch({ type: "set-game", game: patchedGame });
+  };
 
   React.useEffect(
     () =>
