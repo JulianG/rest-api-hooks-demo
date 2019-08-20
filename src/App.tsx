@@ -16,14 +16,9 @@ const App: React.FC = () => {
           <h3>
             {game.title} ({game.year})
           </h3>
+          <img src={game.img} width="320" alt={game.title} />
           <p>
             Genre: <strong>{game.genre}</strong>
-          </p>
-          <p>
-            Wikipedia:{" "}
-            <strong>
-              <a href={game.url}>{game.url}</a>
-            </strong>
           </p>
             <Status
               status={game.status}

@@ -5,6 +5,7 @@ export type Game = {
   readonly year: number;
   readonly genre: string;
   readonly url: string;
+  readonly img: string;
   status: GameStatus;
 };
 
