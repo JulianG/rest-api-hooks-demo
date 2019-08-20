@@ -2,7 +2,7 @@
 
 Some client-side applications are very simple. This one simply
 
-* Fetch a list of items from a REST API and displays it.
+* Fetches a list of items from a REST API and displays it.
 * Makes simple changes to some items (e.g. "mark as read", "approve/reject", etc)
 
 Perhaps we don't need a state management library for this.
