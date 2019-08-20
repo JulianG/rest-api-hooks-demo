@@ -1,3 +1,31 @@
+# Wrapping a REST API in a custom React Hook
+
+This is a proof-of-concept:
+
+When all the client application does is display a list of items retrieved form a REST API
+and barely makes changes to some of them (e.g. "mark as read", "approve/reject", etc)
+perhaps we don't need a state management library.
+
+This example avoids using MobX, or any other state management library, by wrapping a REST API in a custom React Hook.
+
+## How to use:
+
+**First run the fake server (port 3001)**
+```
+yarn server
+```
+
+**Then run the client (port 3000)**
+```
+yarn start
+```
+
+
+
+----
+
+----
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
