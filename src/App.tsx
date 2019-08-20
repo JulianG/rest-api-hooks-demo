@@ -1,10 +1,9 @@
 import React from "react";
 import { useGamesAPI } from "./model/useGamesAPI";
 import { makeGameAPI } from "./api/games.api";
-import { jsonFetch } from "./api/json.fetch";
 import { GameStatus } from './model/model';
 
-const gameApi = makeGameAPI(jsonFetch, "http://localhost:3001/");
+const gameApi = makeGameAPI("http://localhost:3001/");
 
 const App: React.FC = () => {
   const { games, setGameStatus } = useGamesAPI(gameApi);
